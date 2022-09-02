@@ -1,0 +1,24 @@
+{
+  "name": "ts-full-stack-ref-monorepo",
+  "version": "1.0.0",
+  "description": "TypeScript full stack reference monorepo of 2022.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-stanisz/ts-full-stack-ref-monorepo.git"
+  },
+  "keywords": [],
+  "author": "Adam Staniszewski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-stanisz/ts-full-stack-ref-monorepo/issues"
+  },
+  "homepage": "https://github.com/a-stanisz/ts-full-stack-ref-monorepo#readme",
+  "volta": {
+    "node": "18.8.0",
+    "npm": "8.19.1"
+  }
+}
