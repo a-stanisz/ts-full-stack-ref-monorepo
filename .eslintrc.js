@@ -52,7 +52,7 @@ module.exports = {
     'consistent-return': 'error',
     radix: ['error', 'as-needed'],
     'global-require': [0],
-    semi: [2, 'always'],
+    semi: [2, 'never'],
 
     'object-curly-newline': 0,
     'function-paren-newline': 0,
