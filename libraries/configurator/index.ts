@@ -11,7 +11,7 @@ export function initialize(schema) {
 
 export function getValue(keyName: string): string {
   if (convictConfigurationProvider === undefined) {
-    throw new Error('Configuration has not been initialized yet')
+    throw new Error('Configuration has not been initialized yet.')
   }
   return convictConfigurationProvider.get(keyName) as string
 }
