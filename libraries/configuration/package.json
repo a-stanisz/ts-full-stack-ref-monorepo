@@ -1,0 +1,19 @@
+{
+  "name": "configuration",
+  "version": "0.0.2",
+  "description": "",
+  "main": "./.dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adam Staniszewski",
+  "license": "MIT",
+  "dependencies": {
+    "convict": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/convict": "^6.1.1",
+    "typescript": "^4.8.3"
+  }
+}
