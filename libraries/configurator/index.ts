@@ -1,6 +1,8 @@
 import convict from 'convict'
 
-let convictConfigurationProvider: convict.Config<any> | undefined
+let convictConfigurationProvider:
+  | convict.Config<Record<string, unknown>>
+  | undefined
 
 export function initialize(schema) {
   convictConfigurationProvider = convict(schema)
