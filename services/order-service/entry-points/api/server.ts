@@ -1,7 +1,7 @@
 import { Server } from 'http'
 import { AddressInfo } from 'net'
 import express from 'express'
-import * as configurationProvider from '../../../../libraries/configuration'
+import * as configurationProvider from '../../../../libraries/configurator'
 import configurationSchema from '../../config'
 
 let connection: Server
