@@ -1,0 +1,16 @@
+{
+  "name": "error-handler",
+  "version": "0.0.2",
+  "description": "Error-handling library to be commonly used by other components",
+  "main": "./.dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adam Staniszewski",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "typescript": "^4.8.3"
+  }
+}
