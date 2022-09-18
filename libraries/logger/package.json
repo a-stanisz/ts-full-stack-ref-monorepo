@@ -1,0 +1,18 @@
+{
+  "name": "logger",
+  "version": "0.0.2",
+  "description": "Logging library to be commonly used by other components",
+  "main": "./.dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Adam Staniszewski",
+  "license": "MIT",
+  "dependencies": {
+    "pino": "^8.5.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.8.3"
+  }
+}
