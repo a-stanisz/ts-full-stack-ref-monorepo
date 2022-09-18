@@ -1,9 +1,9 @@
-export type LOG_LEVELS = 'debug' | 'info' | 'warn' | 'error' | 'critical'
+export type LOG_LEVELS = 'debug' | 'error' | 'info' | 'warning' | 'critical'
 
 export interface Logger {
-  info(message: string, ...args: unknown[]): void
-  error(message: string, ...args: unknown[]): void
   debug(message: string, ...args: unknown[]): void
+  error(message: string, ...args: unknown[]): void
+  info(message: string, ...args: unknown[]): void
   warning(message: string, ...args: unknown[]): void
 }
 
