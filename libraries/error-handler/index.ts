@@ -1,6 +1,6 @@
 import * as Http from 'http'
 import * as util from 'util'
-import { logger } from '../logger'
+import { logger } from 'logger'
 
 let httpServerRef: Http.Server
 

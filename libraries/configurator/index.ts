@@ -4,12 +4,12 @@ let convictConfigurationProvider:
   | convict.Config<Record<string, unknown>>
   | undefined
 
-export function initialize(schema) {
+export function initializeConfig(schema) {
   convictConfigurationProvider = convict(schema)
   convictConfigurationProvider.validate()
 }
 
-export function getValue(keyName: string): string {
+export function getConfigValue(keyName: string): string {
   if (convictConfigurationProvider === undefined) {
     throw new Error('Configuration has not been initialized yet.')
   }
