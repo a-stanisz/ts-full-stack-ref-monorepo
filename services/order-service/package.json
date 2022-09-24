@@ -17,7 +17,9 @@
   "dependencies": {
     "@types/node": "^18.7.18",
     "configurator": "file:../../libraries/configurator",
-    "express": "^4.18.1"
+    "error-handler": "file:../../libraries/error-handler",
+    "express": "^4.18.1",
+    "logger": "file:../../libraries/logger"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",

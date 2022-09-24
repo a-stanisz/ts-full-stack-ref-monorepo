@@ -9,6 +9,11 @@ let connection: Server
 async function startWebServer(): Promise<AddressInfo> {
   initializeConfig(configurationSchema)
   const expressApp = express()
+
+  expressApp.get('/', (req, res) => {
+    res.send('Hello World!')
+  })
+
   const APIAdress = await openConnection(expressApp)
   return APIAdress
 }
