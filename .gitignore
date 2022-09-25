@@ -105,3 +105,8 @@ dist
 
 # Compiled dirs
 .dist
+
+# Turborepo and tasks artifacts
+build/**
+dist/**
+.next/**
