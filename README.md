@@ -5,25 +5,29 @@
 
 This Node.js project is structured as a monorepo using [Turborepo](https://turborepo.org/docs), around [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) feature.
 
-The root directory contains root-level *package.json* (and *package-lock.json*), *libraries* and *services* directories, empty *index.ts* file for *tsc* (TypeScript build-in compiler) not to complain, ** this README **, LICENSE and configuration files/dirs.
+The root directory contains root-level *package.json* (and *package-lock.json*), *libraries* and *services* directories, empty *index.ts* file for *tsc* (TypeScript build-in compiler) not to complain, this README, LICENSE and configuration files/dirs.
 
-Each directory containing its own *package.json* is a package. For the purpose of this project these are universaly referred as *components*.
+Each directory containing its own *package.json* is a package. For the purpose of this project, these are universally referred to as *components*.
 
-The common utilities are meant to live under *libraries* directory. It contains common functionalities within separate components (like logger) for reusability. These are to be commonly used by any other component.
+### 📚 Libraries
+
+Under *libraries* directory common functionalities lives, wrapped as separate components (like logger) for reusability. These are meant to be commonly used by any other component.
+
+Each library component is structured only as complex as reasonably necessary, meaning is it likely to be and remain fairly simple since not needing to scale up.
+
+### ⚙ Services
 
 The microservices/apps/APIs are meant to live under *services* directory.
 
-Each library-component is structured only as complex as reasonably necessary, meaning is it likely to be and remain fairly simple.
-
-Each service-component will be structured following "3-Tiers" architectural pattern for the purpose to meet the design principle of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns), easing further scaling-up.
+Each service component will be structured following the "3-Tiers" architectural pattern to meet the design principle of [separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns), easing further scaling-up.
 
 It means it contains 3 separate layers:
 
-- 1st layer: "entry-points", where the control flow starts and requests come-in. An example component is meant to has a REST API there. The API receives requests, perform authentication, extract the payload and pass the control to the next layer.
+- 1st layer: "entry-points", where the control flow starts and requests come in. An example component is meant to have a REST API there. The API receives requests, performs authentication, extracts the payload, and passes the control to the next layer.
 
 - 2nd layer: "domain" (TBD), where the business logic of an app is defined, following the principle of [domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design). It can serve any kind of entry-points, being agnostic of the caller. It may call other services. It is also to interact with a database, which is done through the next layer.
 
-- 3rd layer: "data-access" ([DAL](https://en.wikipedia.org/wiki/Data_access_layer)) (TBD), where all database interaction is meant to be defined and configured. It also defines objects model with ORM.
+- 3rd layer: "data-access" ([DAL](https://en.wikipedia.org/wiki/Data_access_layer)) (TBD), where all database interaction is meant to be defined and configured. It also defines the object model with ORM.
 
 ## 🤖🛠️ Technologies and tools
 
