@@ -1,19 +1,19 @@
 # ts-full-stack-ref-monorepo
 **TypeScript full-stack reference monorepo for 2022.**
 
-## 🎯 The goal
+## 🎯 Objective
 
 JavaScript and Node.js world is famously, almost everywhere "unopinionated". That is great because it's empowering the community's freedom in coming up with new things and one of its strengths. However, it can make the learning process quite difficult, especially when you're self-taught. Lacking standard, commonly used architectures could be confusing.
 
-In recent few years, there is a trend of attempts to establish some standards, at least partly. For instance to propose ready-to-use architectures. Some examples could be [Angular](https://angular.io/docs), [Nest](https://docs.nestjs.com/), and [Redwood](https://redwoodjs.com/docs/introduction). There is a brilliant attempt to [gather in one place](https://github.com/goldbergyoni/nodebestpractices) all recent, commonly considered as widely established Node.js best practices.
+In the recent few years, there is a trend to establish some standards, at least partly. For instance to propose ready-to-use architectures. Some examples could be [Angular](https://angular.io/docs), [Nest](https://docs.nestjs.com/), and [Redwood](https://redwoodjs.com/docs/introduction). There is a brilliant attempt to [gather in one place](https://github.com/goldbergyoni/nodebestpractices) all recent, considered to be widely established, Node.js best practices.
 
 The progressing maturity of the JS ecosystem is also indicated by the wide use of TypeScript.
 
-This repository tries to establish one full-stack reference architecture for my other projects. I do this primarily for myself and want to hopefully update it at least every few months. However, any feedback from you is also very welcome!
+This repository tries to establish one full-stack reference architecture for my other learning projects. I do this primarily for myself and when done, I want to hopefully update it at least every few months. You're welcome to use it, any feedback is also appreciated!
 
 ## 🌳 Project architecture
 
-This Node.js project is structured as a monorepo using [Turborepo](https://turborepo.org/docs), around [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) feature.
+This Node.js project is structured as a [monorepo](https://monorepo.tools/#understanding-monorepos) using [Turborepo](https://turborepo.org/docs), around [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces) feature.
 
 The root directory contains root-level *package.json* (and *package-lock.json*), *libraries* and *services* directories, empty *index.ts* file for *tsc* (TypeScript build-in compiler) not to complain, this README, LICENSE and configuration files/dirs.
 
