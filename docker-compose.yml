@@ -1,0 +1,15 @@
+services:
+  order-service:
+    build:
+      context: ./services/order-service
+      args:
+        - NODE_ENV=development
+    volumes:
+      - .:/opt/node_app/app
+      - ./package.json:/opt/node_app/package.json
+      - ./package-lock.json:/opt/node_app/package-lock.json
+      - notused:/opt/node_app/app/node_modules
+    environment:
+      - NODE_ENV=development
+    healthcheck:
+      disable: true
