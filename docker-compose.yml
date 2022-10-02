@@ -13,3 +13,5 @@ services:
       - NODE_ENV=development
     healthcheck:
       disable: true
+volumes:
+  notused:

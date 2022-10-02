@@ -1,4 +1,4 @@
-FROM node:18.10-apline
+FROM node:18.10-alpine
 
 ARG NODE_ENV=production
 ENV NODE_ENV $NODE_ENV
@@ -14,7 +14,7 @@ WORKDIR /opt/node_app
 
 USER node
 COPY --chown=node:node package.json package-lock.json* ./
-RUN npm ci && npm cache clean --force
+RUN npm install && npm cache clean --force
 ENV PATH /opt/node_app/node_modules/.bin:$PATH
 
 WORKDIR /opt/node_app/app
