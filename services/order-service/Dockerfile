@@ -9,15 +9,21 @@ EXPOSE $PORT 9229 9230
 
 RUN npm i npm@latest -g
 
+RUN mkdir /opt/libraries && chown node:node /opt/libraries
+WORKDIR /opt/libraries
+USER node
+COPY --chown=node:node ../../libraries .
+
 RUN mkdir /opt/node_app && chown node:node /opt/node_app
 WORKDIR /opt/node_app
-
 USER node
-COPY --chown=node:node package.json package-lock.json* ./
+COPY --chown=node:node package.json ./
 RUN npm install && npm cache clean --force
 ENV PATH /opt/node_app/node_modules/.bin:$PATH
 
 WORKDIR /opt/node_app/app
 COPY --chown=node:node . .
+
+RUN npm run build
 
 CMD [ "node", "./.dist/bin/www.js" ]
