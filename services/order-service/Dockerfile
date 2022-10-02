@@ -20,4 +20,4 @@ ENV PATH /opt/node_app/node_modules/.bin:$PATH
 WORKDIR /opt/node_app/app
 COPY --chown=node:node . .
 
-CMD [ "node", "./bin/www" ]
+CMD [ "node", "./.dist/bin/www.js" ]
