@@ -1,13 +1,14 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "pipeline": {
-    "build":{
+    "build": {
       "dependsOn": ["^build"],
       "outputs": [".dist/**"]
     },
-    "test":{
+    "test": {
       "dependsOn": ["^build"]
     },
-    "installDependencies": {}
+    "installDeps": {},
+    "updateLockfiles": {}
   }
 }
