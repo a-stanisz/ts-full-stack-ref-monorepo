@@ -1,17 +1,22 @@
 services:
   order-service:
     build:
-      context: ./services/order-service
+      context: ./
+      dockerfile: ./Dockerfiles/order-service.Dockerfile
       args:
         - NODE_ENV=development
     volumes:
-      - .:/opt/node_app/app
-      - ./package.json:/opt/node_app/package.json
-      - ./package-lock.json:/opt/node_app/package-lock.json
+      - ./services/order-service:/opt/node_app/app
+      - ./services/order-service/package.json:/opt/node_app/package.json
+      - ./libraries:/opt/libraries
       - notused:/opt/node_app/app/node_modules
     environment:
       - NODE_ENV=development
+    ports:
+      - 3000:3000
+      - 9229:9229
     healthcheck:
       disable: true
+    command: npx nodemon --inspect=0.0.0.0:9229 --signal SIGINT --nolazy ./bin/www.ts
 volumes:
   notused:
