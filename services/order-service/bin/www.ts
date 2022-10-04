@@ -1,7 +1,6 @@
 import { logger } from 'logger'
 import { errorHandler, AppError } from 'error-handler'
-
-import { start } from '..'
+import start from '../index'
 
 start()
   .then((startResponses) => {
