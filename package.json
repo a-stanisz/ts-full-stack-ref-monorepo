@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "turbo run test",
-    "build": "turbo run build"
+    "build": "turbo run build",
+    "installDeps": "turbo run installDeps",
+    "updateLockfiles": "turbo run updateLockfiles"
   },
   "workspaces": [
     "libraries/*",
