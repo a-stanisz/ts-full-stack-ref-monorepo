@@ -7,7 +7,9 @@
     "test": "turbo run test",
     "build": "turbo run build",
     "installDeps": "turbo run installDeps",
-    "updateLockfiles": "turbo run updateLockfiles"
+    "updateLockfiles": "turbo run updateLockfiles",
+    "maintenance:delete-node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
+    "maintenance:delete-dist": "find . -name '.dist' -type d -prune -exec rm -rf '{}' +"
   },
   "workspaces": [
     "libraries/*",
