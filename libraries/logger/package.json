@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "installDeps": "npm install",
-    "updateLockfiles": "npm install --package-lock-only"
+    "installDeps": "yarn install"
   },
   "keywords": [],
   "author": "Adam Staniszewski",

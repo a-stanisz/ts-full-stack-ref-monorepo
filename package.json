@@ -3,12 +3,12 @@
   "version": "0.0.2",
   "description": "TypeScript full-stack reference monorepo for 2022",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "host:test": "turbo run test",
     "host:build": "turbo run build",
     "host:start": "nodemon -r dotenv/config services/order-service/.dist/index.js",
     "installDeps": "turbo run installDeps",
-    "updateLockfiles": "turbo run updateLockfiles",
     "maintenance:delete-node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "maintenance:delete-dist": "find . -name '.dist' -type d -prune -exec rm -rf '{}' +"
   },

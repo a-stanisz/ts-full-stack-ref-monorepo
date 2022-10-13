@@ -1,25 +1,25 @@
 FROM node:18.10-alpine AS builder
 RUN apk update
-WORKDIR /app
 RUN apk add --no-cache libc6-compat
-RUN npm install --global npm@latest
-RUN npm install --global turbo
+WORKDIR /app
+RUN yarn global add turbo
 ENV PATH /app/node_modules/.bin:$PATH
 COPY . .
 RUN turbo prune --scope=order-service --docker
 
 FROM node:18.10-alpine AS installer
 RUN apk update
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 COPY .gitignore .gitignore
 COPY --from=builder /app/out/json/ .
-COPY --from=builder /app/out/package-lock.json ./package-lock.json
-RUN npm install
+COPY --from=builder /app/out/yarn.lock ./yarn.lock
+RUN yarn install
 
 COPY --from=builder /app/out/full/ .
 COPY turbo.json turbo.json
-RUN turbo run build --filter=order-service...
+RUN yarn turbo run build --filter=order-service...
 
 FROM node:18.10-alpine AS runner
 WORKDIR /app
