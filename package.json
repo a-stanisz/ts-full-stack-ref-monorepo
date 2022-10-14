@@ -5,9 +5,9 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "host:test": "turbo run test",
-    "host:build": "turbo run build",
-    "host:start": "nodemon -r dotenv/config services/order-service/.dist/index.js",
+    "test": "turbo run test",
+    "build": "turbo run build",
+    "start": "nodemon -r dotenv/config services/order-service/.dist/index.js",
     "installDeps": "turbo run installDeps",
     "maintenance:delete-node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "maintenance:delete-dist": "find . -name '.dist' -type d -prune -exec rm -rf '{}' +"

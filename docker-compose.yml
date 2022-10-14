@@ -16,7 +16,7 @@ services:
       - ts_stack_network
     healthcheck:
       disable: true
-    command: npx nodemon --inspect=0.0.0.0:9229 --signal SIGINT --nolazy .dist/index.js
+    command: npx nodemon --inspect=0.0.0.0:9229 --signal SIGINT --nolazy ./services/order-service/.dist/index.js
 networks:
   ts_stack_network:
     external: true

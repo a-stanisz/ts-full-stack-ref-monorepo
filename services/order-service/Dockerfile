@@ -22,6 +22,8 @@ COPY turbo.json turbo.json
 RUN yarn turbo run build --filter=order-service...
 
 FROM node:18.10-alpine AS runner
+RUN apk update
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 ARG NODE_ENV=production
@@ -35,5 +37,7 @@ RUN addgroup --system --gid 1001 node_app
 RUN adduser --system --uid 1001 node_app
 USER node_app
 COPY --from=installer /app .
+RUN yarn install
+RUN yarn build
 
 CMD node services/order-service/.dist/index.js

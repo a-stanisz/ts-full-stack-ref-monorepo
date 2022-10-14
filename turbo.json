@@ -10,5 +10,10 @@
     },
     "installDeps": {},
     "updateLockfiles": {}
-  }
+  },
+  "globalDependencies": [
+    ".env",
+    ".eslintrc",
+    "tsconfig.json"
+  ]
 }

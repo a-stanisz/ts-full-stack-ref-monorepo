@@ -11,7 +11,7 @@
         "<node_internals>/**"
       ],
       "localRoot": "${workspaceFolder}/services/order-service",
-      "remoteRoot": "/opt/node_app/app",
+      "remoteRoot": "/app/services/order-service",
     }
   ]
 }
