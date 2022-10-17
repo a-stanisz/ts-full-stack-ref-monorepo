@@ -5,10 +5,10 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "test": "turbo run test",
+    "lint": "turbo run lint",
     "build": "turbo run build",
+    "test": "turbo run test",
     "start": "nodemon -r dotenv/config services/order-service/.dist/index.js",
-    "installDeps": "turbo run installDeps",
     "maintenance:delete-node-modules": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
     "maintenance:delete-dist": "find . -name '.dist' -type d -prune -exec rm -rf '{}' +"
   },
@@ -20,7 +20,7 @@
   "license": "MIT",
   "volta": {
     "node": "18.10.0",
-    "npm": "8.19.2"
+    "yarn": "1.22.19"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.36.1",

@@ -4,9 +4,9 @@
   "description": "Error-handling utility to be commonly used by other components",
   "main": ".dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint --parser tsconfig.json",
     "build": "tsc",
-    "installDeps": "yarn install"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Adam Staniszewski",
