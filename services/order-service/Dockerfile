@@ -7,6 +7,7 @@ COPY . .
 RUN turbo prune --scope=order-service --docker
 
 FROM node:18.10-bullseye-slim AS installer
+RUN apt update
 WORKDIR /app
 
 COPY .gitignore .gitignore
@@ -19,6 +20,7 @@ COPY turbo.json turbo.json
 RUN yarn turbo run build --filter=order-service...
 
 FROM node:18.10-bullseye-slim AS runner
+RUN apt update
 WORKDIR /app
 
 ARG NODE_ENV=production
