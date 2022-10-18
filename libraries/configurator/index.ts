@@ -4,7 +4,7 @@ let convictConfigurationProvider:
   | convict.Config<Record<string, unknown>>
   | undefined
 
-export function initializeConfig(schema) {
+export function initializeConfig(schema: any) {
   convictConfigurationProvider = convict(schema)
   convictConfigurationProvider.validate()
 }
