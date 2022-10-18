@@ -7,11 +7,13 @@
       "request": "attach",
       "port": 9229,
       "restart": true,
+      "sourceMaps": true,
       "skipFiles": [
+        "/app/node_modules/**/*.js",
         "<node_internals>/**"
       ],
-      "localRoot": "${workspaceFolder}/services/order-service",
-      "remoteRoot": "/app/services/order-service",
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "/app",
     }
   ]
 }
