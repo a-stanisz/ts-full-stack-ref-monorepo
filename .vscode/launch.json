@@ -12,7 +12,7 @@
         "/app/node_modules/**/*.js",
         "<node_internals>/**"
       ],
-      "localRoot": "${workspaceFolder}",
+      "localRoot": "${workspaceFolder}/services/order-service",
       "remoteRoot": "/app",
     }
   ]

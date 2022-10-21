@@ -2,6 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
+      "label": "build",
+      "type": "shell",
+      "command": "yarn build",
+      "presentation": {
+        "reveal": "never"
+      }
+    },
+    {
       "label": "restart",
       "type": "shell",
       "command": "docker compose restart order-service",
