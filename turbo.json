@@ -13,7 +13,7 @@
       "outputs": []
     },
     "start": {
-      "dependsOn": ["build"],
+      "dependsOn": ["build", "^start"],
       "outputs": []
     }
   },
