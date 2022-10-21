@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --parser tsconfig.json",
     "build": "tsc",
-    "start": "nodemon --watch '../../libraries/**' --watch '../../services/**' --ext 'ts, json' --inspect=0.0.0.0:9229 --signal SIGINT --nolazy -r dotenv/config -r ts-node/register -r tsconfig-paths/register ./.dist/index.js",
+    "start": "nodemon -r dotenv/config ./index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
