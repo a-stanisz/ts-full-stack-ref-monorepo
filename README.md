@@ -1,3 +1,7 @@
+```
+Important Note: This repository is abandoned for now, since becoming too complex
+```
+
 # ts-full-stack-ref-monorepo
 **TypeScript full-stack reference monorepo for 2022.**
 
